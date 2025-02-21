@@ -17,7 +17,7 @@ export default function AsSeenOn() {
               style={{ width: `${width}px`, maxWidth: "200px" }}
             />
           </h2>
-          <div className="flex mx-auto flex-wrap justify-center gap-4 mt-[76px] w-full max-w-[1200px]">
+          <div className="flex mx-auto flex-wrap justify-center gap-4 mt-[26px] sm:mt-[76px] w-full max-w-[1200px]">
             {[
               "media_1.png",
               "media_2.png",

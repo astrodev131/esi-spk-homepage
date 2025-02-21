@@ -16,7 +16,7 @@ export default function GetStarted() {
         backgroundPosition: "bottom",
       }}
     >
-      <div className="w-full max-w-5xl mx-auto text-center space-y-[48px]">
+      <div className="w-full max-w-5xl mx-auto text-center sm:space-y-[48px] space-y-[26px]">
         <h2 className="text-white text-[20px] md:text-[40px] font-semibold">
           Get Started Today
           <div
@@ -25,7 +25,7 @@ export default function GetStarted() {
             style={{ width: `${width}px`, maxWidth: "200px" }}
           />
         </h2>
-        <p className="md:w-[634px] md:mt-[48px] mt-[32px] text-center text-white/60 text-sm md:text-[18px] font-normal leading-[21px] md:leading-[27px] mx-auto">
+        <p className="md:w-[634px] md:mt-[48px] mt-[32px]   text-center text-white/60 text-sm md:text-[18px] font-normal leading-[21px] md:leading-[27px] mx-auto">
           Focus on what matters and make smarter, faster decisions with Kaito.
           Stop getting lost in the sea of the information in Web3.
         </p>

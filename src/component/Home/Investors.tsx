@@ -26,7 +26,7 @@ export default function Investors() {
                 alt="Investor Logos"
                 width={1200}
                 height={400}
-                className="w-[1200px] h-auto max-w-full md:max-w-full mt-[72px] lg:max-w-full xl:max-w-7xl"
+                className="w-[1200px] h-auto max-w-full md:max-w-full mt-[26px] sm:mt-[76px] lg:max-w-full xl:max-w-7xl"
               />
             </div>
           </div>
