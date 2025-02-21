@@ -56,7 +56,7 @@ export default function Header() {
             <div
               data-sentry-element="Flex"
               data-sentry-source-file="Button.tsx"
-              className="css-gmuwbf font-semibold tracking-wide"
+              className="css-gmuwbf px-5 font-semibold tracking-wide"
             >
               Contact Sales
             </div>
