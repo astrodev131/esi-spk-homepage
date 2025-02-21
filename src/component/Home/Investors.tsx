@@ -1,25 +1,9 @@
 import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
+import useScrollWidth from "./CustomHook";
 export default function Investors() {
-  const [width, setWidth] = useState(10);
   const divRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (divRef.current) {
-        const rect = divRef.current.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        const newWidth = Math.min(
-          200,
-          Math.max(10, 200 * (1 - rect.top / windowHeight))
-        );
-        setWidth(newWidth);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const width = useScrollWidth(divRef as React.RefObject<HTMLElement>);
   return (
     <section className="w-full px-4 md:px-8 lg:px-16 mx-auto">
       <div className="flex flex-col items-center justify-center mt-20 md:mt-[110px]">

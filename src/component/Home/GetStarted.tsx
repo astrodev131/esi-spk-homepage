@@ -1,25 +1,10 @@
 import { Button, StyledButton } from "./Button";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
+import useScrollWidth from "./CustomHook";
+
 export default function GetStarted() {
-  const [width, setWidth] = useState(10);
   const divRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (divRef.current) {
-        const rect = divRef.current.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        const newWidth = Math.min(
-          200,
-          Math.max(10, 200 * (1 - rect.top / windowHeight))
-        );
-        setWidth(newWidth);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const width = useScrollWidth(divRef as React.RefObject<HTMLElement>);
 
   return (
     <section

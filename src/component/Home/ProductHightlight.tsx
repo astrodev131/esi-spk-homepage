@@ -1,26 +1,10 @@
 import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
+import useScrollWidth from "./CustomHook";
 
 export default function ProductHightlight() {
-  const [width, setWidth] = useState(10);
   const divRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (divRef.current) {
-        const rect = divRef.current.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        const newWidth = Math.min(
-          200,
-          Math.max(10, 200 * (1 - rect.top / windowHeight))
-        );
-        setWidth(newWidth);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const width = useScrollWidth(divRef as React.RefObject<HTMLElement>);
   return (
     <section
       className="pt-12 px-4 sm:px-2 md:pt-24 relative w-full sm:h-auto h-[1000px]"
