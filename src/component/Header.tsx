@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [selectedItem, setSelectedItem] = useState<string | null>(null);
 
   return (
     <header
@@ -24,15 +25,29 @@ export default function Header() {
               className="h-[20px] min:w-[100px]"
             />
           </Link>
-          <nav className="hidden lg:flex items-center gap-[26px]">
+          <nav className="hidden lg:flex align-middle items-center gap-[26px]">
             {["Portal", "API", "Pricing", "Yaps", "Careers", "EthCC"].map(
               (item) => (
                 <Link
                   key={item}
                   href="#"
-                  className="text-lg text-[#cfcfcf] hover:text-white transition-colors"
+                  className={`relative text-lg text-[#cfcfcf] h-[70px] font-semibold hover:text-white transition-colors duration-500 flex items-center
+    before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-cyancolor before:transition-all before:duration-[1500ms] before:ease-in-out
+    hover:before:w-full
+    ${selectedItem === item ? "border-b-2 border-cyancolor text-white" : ""}
+  `}
+                  onClick={() => setSelectedItem(item)}
                 >
-                  {item}
+                  <div className="flex flex-col">
+                    <div className="group">
+                      <div className="block group-hover:opacity-0 group-hover:mb-7 duration-500">
+                        {item}
+                      </div>
+                      <div className="opacity-0 absolute group-hover:opacity-100 group-hover:bottom-6 bottom-0 group-hover:block transition-all duration-500 ease-in-out">
+                        {item}
+                      </div>
+                    </div>
+                  </div>
                 </Link>
               )
             )}

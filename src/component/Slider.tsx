@@ -25,7 +25,7 @@ export function ImageSlider() {
 
   return (
     <div
-      className="relative sm:w-[50%] lg:w-full w-full max-w-[590px] right-0 flex justify-end sm:h-[50%] lg:h-full h-full max-h-[419px] border border-gray-800 rounded-[5px] overflow-hidden"
+      className="relative sm:w-[50%] lg:w-full w-full max-w-[590px] right-0 flex justify-end sm:h-[50%] lg:h-full h-full max-h-[419px] border border-gray-800 rounded-[5px]"
       onMouseDown={(e) => {
         e.preventDefault();
         const startX = e.clientX;
@@ -66,16 +66,16 @@ export function ImageSlider() {
           />
         </div>
       ))}
-      <div className="absolute -bottom-4 z-20 left-1/2 transform -translate-x-1/2 flex gap-2">
+      <div className="absolute -bottom-4 z-50 left-1/2 transform -translate-x-1/2 flex gap-2">
         {slides.map((_, index) => (
           <button
             key={index}
             className={`h-[3px] rounded-full transition-all duration-900 ease-in-out
-    ${
-      index === currentSlide
-        ? "bg-gradient-to-r from-[#32ffdc] to-[#144d43] w-8"
-        : "bg-white/50 w-4"
-    }`}
+        ${
+          index === currentSlide
+            ? "bg-gradient-to-r from-[#32ffdc] to-[#144d43] w-8"
+            : "bg-white/50 w-4"
+        }`}
             onClick={() => setCurrentSlide(index)}
           />
         ))}
