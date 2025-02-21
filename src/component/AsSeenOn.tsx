@@ -33,7 +33,7 @@ export default function AsSeenOn() {
               style={{ width: `${width}px`, maxWidth: "200px" }}
             />
           </h2>
-          <div className="flex mx-auto flex-wrap justify-between gap-4 mt-[76px] w-full max-w-[1200px]">
+          <div className="flex mx-auto flex-wrap justify-center gap-4 mt-[76px] w-full max-w-[1200px]">
             <div className="w-24 h-14 md:w-56 md:h-32 border border-gray-800 hover:border-[#32ffdc] rounded-[10px] overflow-hidden">
               <Image
                 src="/img/media_1.png"

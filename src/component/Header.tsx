@@ -15,16 +15,16 @@ export default function Header() {
     >
       <div className="max-w-[1540px] px-[50px] mt-1 mx-auto flex h-[71px] items-center justify-between">
         <div className="flex items-center gap-[46px]">
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex h-[20px] min:w-[100px] items-center">
             <Image
               src="/logo.d373024f.png"
               alt="Kaito Logo"
               width={100}
               height={20}
-              className="h-[20px] w-[100px]"
+              className="h-[20px] min:w-[100px]"
             />
           </Link>
-          <nav className="hidden md:flex items-center gap-[26px]">
+          <nav className="hidden lg:flex items-center gap-[26px]">
             {["Portal", "API", "Pricing", "Yaps", "Careers", "EthCC"].map(
               (item) => (
                 <Link
@@ -38,10 +38,10 @@ export default function Header() {
             )}
           </nav>
         </div>
-        <div className="flex justify-end items-center gap-2 w-[228px]">
+        <div className="flex justify-end items-center gap-2 max-w-[228px]">
           <Link
             href="#"
-            className="hidden sm:block text-lg text-cyancolor hover:text-cyan-400 transition-colors"
+            className="hidden lg:block text-lg text-cyancolor hover:text-cyan-400 transition-colors"
           >
             <div className="cursor-pointer h-8 px-4 py-[11px] text-lg  rounded justify-center items-center inline-flex">
               <div className="font-semibold leading-tight text-center text-teal-300">
@@ -50,7 +50,7 @@ export default function Header() {
             </div>
           </Link>
           <Button
-            className="hidden md:block w-[135px] h-[32px]"
+            className="hidden lg:block max-w-[135px] h-[32px]"
             onClick={() => {}}
           >
             <div
@@ -62,7 +62,7 @@ export default function Header() {
             </div>
           </Button>
           <div
-            className="md:hidden"
+            className="lg:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? (

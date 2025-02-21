@@ -173,10 +173,10 @@ export default function Footer() {
         </div>
       </div>
       <div
-        className="fixed bottom-0 left-0 right-0 z-10 px-6 pt-2 pb-4 text-center bg-gray-800 md:hidden backdrop-blur-xl"
+        className="fixed bottom-0 left-0 right-0 mx-auto z-10 px-6 pt-2 pb-4 text-center bg-gray-800 md:hidden backdrop-blur-xl"
         style={{ backgroundColor: "#0d0f12" }}
       >
-        <div className="flex flex-col justify-center w-[90%] items-center gap-1">
+        <div className="flex flex-col justify-center  items-center gap-1">
           <button
             className={`px-4 py-1 text-black rounded w-full disabled:bg-gray-400`}
             style={{
