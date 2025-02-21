@@ -41,7 +41,7 @@ export default function ProductHightlight() {
               className="rounded-lg w-full h-auto"
             />
           </div>
-          <div className="flex flex-col gap-11 mt-24 order-1 max-w-[383px] h-[488px] lg:order-2">
+          <div className="flex flex-col gap-11 mt-20 order-1 max-w-[383px] h-[488px] lg:order-2">
             {[
               {
                 icon: "/img/investor_tip_1.png",
