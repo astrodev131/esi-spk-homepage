@@ -41,27 +41,36 @@ export default function ProductHightlight() {
               className="rounded-lg w-full h-auto"
             />
           </div>
-          <div className="gap-[44px] flex flex-col mt-[100px] order-1 max-w-[383px] h-[488px] lg:order-2">
-            <FeatureItem
-              icon="/img/investor_tip_1.png"
-              title="Instant Insights"
-              description="Separate the signal from the noise"
-            />
-            <FeatureItem
-              icon="/img/investor_tip_2.png"
-              title="Improve Time to Decision"
-              description="Reduce wasted time on manual research"
-            />
-            <FeatureItem
-              icon="/img/investor_tip_3.png"
-              title="Build Conviction"
-              description="Avoid blind spots and understand market trends"
-            />
-            <FeatureItem
-              icon="/img/investor_tip_4.png"
-              title="Next-Gen AI Capabilities"
-              description="Let AI work for you"
-            />
+          <div className="flex flex-col gap-11 mt-24 order-1 max-w-[383px] h-[488px] lg:order-2">
+            {[
+              {
+                icon: "/img/investor_tip_1.png",
+                title: "Instant Insights",
+                description: "Separate the signal from the noise",
+              },
+              {
+                icon: "/img/investor_tip_2.png",
+                title: "Improve Time to Decision",
+                description: "Reduce wasted time on manual research",
+              },
+              {
+                icon: "/img/investor_tip_3.png",
+                title: "Build Conviction",
+                description: "Avoid blind spots and understand market trends",
+              },
+              {
+                icon: "/img/investor_tip_4.png",
+                title: "Next-Gen AI Capabilities",
+                description: "Let AI work for you",
+              },
+            ].map((feature, index) => (
+              <FeatureItem
+                key={index}
+                icon={feature.icon}
+                title={feature.title}
+                description={feature.description}
+              />
+            ))}
           </div>
         </div>
       </div>
