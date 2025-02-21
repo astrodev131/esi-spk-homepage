@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 export default function Footer() {
   return (
-    <footer className="mt-20">
-      <div className="px-16 py-10 md:pb:10 pb-20 md:pb-11">
+    <footer className="pt-[80px]">
+      <div className="sm:px-[78px] px-[18px] py-10 md:pb:10 pb-20 md:pb-12">
         <div className="flex flex-col xl:flex-row justify-between">
           <div className="-mt-10 md:flex-row lg:flex-col flex lg:w-5/12 w-12/12 flex-col justify-start gap-4 items-start">
             <div className="flex items-center gap-2 mb-6">
@@ -97,10 +97,10 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-          <div className="flex xl:w-5/12 w-full mt-5 justify-between flex-wrap gap-4">
+          <div className="flex xl:w-[720px] w-full mt-5 justify-between flex-wrap gap-4">
             <div className="w-1/3 sm:w-1/5">
-              <h3 className="font-semibold text-[16px] mb-4">Product</h3>
-              <ul className="space-y-2">
+              <h3 className="font-semibold mb-4 text-[16px]">Product</h3>
+              <ul className="space-y-4">
                 {["Portal", "API", "Yaps"].map((item) => (
                   <li key={item}>
                     <Link
@@ -115,8 +115,8 @@ export default function Footer() {
             </div>
 
             <div className="w-1/3 sm:w-1/5">
-              <h3 className="font-semibold  text-[16px] mb-4">Resources</h3>
-              <ul className="space-y-2">
+              <h3 className="font-semibold mb-4 text-[16px]">Resources</h3>
+              <ul className="space-y-4">
                 {["EthCC"].map((item) => (
                   <li key={item}>
                     <Link
@@ -131,8 +131,8 @@ export default function Footer() {
             </div>
 
             <div className="w-1/3 mt-10 sm:mt-0 sm:w-1/5">
-              <h3 className="font-semibold  text-[16px] mb-4">Pricing Plan</h3>
-              <ul className="space-y-2">
+              <h3 className="font-semibold text-[16px] mb-4">Pricing Plan</h3>
+              <ul className="space-y-4">
                 {["Pricing Plan"].map((item) => (
                   <li key={item}>
                     <Link
@@ -148,7 +148,7 @@ export default function Footer() {
 
             <div className="w-1/3  mt-10 sm:mt-0 sm:w-1/5">
               <h3 className="font-semibold  text-[16px] mb-4">Company</h3>
-              <ul className="space-y-2">
+              <ul className="space-y-4">
                 {[
                   "About Us",
                   "Careers",
@@ -173,7 +173,7 @@ export default function Footer() {
         </div>
       </div>
       <div
-        className="fixed bottom-0 w-full z-40 p-2 md:hidden flex justify-center  backdrop-blur-xl"
+        className="fixed bottom-0 left-0 right-0 z-10 px-6 pt-2 pb-4 text-center bg-gray-800 md:hidden backdrop-blur-xl"
         style={{ backgroundColor: "#0d0f12" }}
       >
         <div className="flex flex-col justify-center w-[90%] items-center gap-1">
@@ -184,7 +184,7 @@ export default function Footer() {
                 "linear-gradient(90.41deg, #32FFDC 8.08%, #33FFFF 93.22%)",
             }}
           >
-            <div className="font-medium">Contact Sales</div>
+            <div className="font-bold">Contact Sales</div>
           </button>
           <div className="text-gray-400 text-[12px]">
             Or sign up from your computer

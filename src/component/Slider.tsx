@@ -25,7 +25,7 @@ export function ImageSlider() {
 
   return (
     <div
-      className="relative sm:w-[50%] lg:w-full w-full right-0 flex justify-end sm:h-[50%] lg:h-full h-full rounded-lg"
+      className="relative sm:w-[50%] lg:w-full w-full max-w-[590px] right-0 flex justify-end sm:h-[50%] lg:h-full h-full max-h-[419px] border border-gray-800 rounded-[5px] overflow-hidden"
       onMouseDown={(e) => {
         e.preventDefault();
         const startX = e.clientX;

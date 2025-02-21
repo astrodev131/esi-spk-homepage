@@ -5,6 +5,7 @@ import ProductHightlight from "./ProductHightlight";
 import Investors from "./Investors";
 import GetStarted from "./GetStarted";
 import Footer from "./Footer";
+import AsSeenOn from "./AsSeenOn";
 
 export default function LandingPage() {
   return (
@@ -13,6 +14,7 @@ export default function LandingPage() {
       <Hero />
       <ProductHightlight />
       <Investors />
+      <AsSeenOn />
       <GetStarted />
       <Footer />
     </div>

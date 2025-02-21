@@ -11,8 +11,8 @@ export default function ProductHightlight() {
         const rect = divRef.current.getBoundingClientRect();
         const windowHeight = window.innerHeight;
         const newWidth = Math.min(
-          300,
-          Math.max(10, 300 * (1 - rect.top / windowHeight))
+          200,
+          Math.max(10, 200 * (1 - rect.top / windowHeight))
         );
         setWidth(newWidth);
       }
@@ -23,14 +23,14 @@ export default function ProductHightlight() {
   }, []);
   return (
     <section
-      className="py-12 md:py-24 relative w-full"
+      className="pt-12 px-4 sm:px-2 md:pt-24 relative w-full sm:h-auto h-[1000px]"
       style={{
         backgroundImage: "url('/product_bg.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="sm:max-w-[1200px] max-[300px] px-10 mx-auto">
         <div className="relative text-center">
           <img
             src="/title_bg.png"
@@ -43,21 +43,21 @@ export default function ProductHightlight() {
             <div
               ref={divRef}
               className="h-[2px] bg-[#5eead4] mx-auto mt-4 transition-all duration-300"
-              style={{ width: `${width}px`, maxWidth: "600px" }}
+              style={{ width: `${width}px`, maxWidth: "200px" }}
             />
           </h2>
         </div>
-        <div className="grid lg:grid-cols-[1.5fr,1fr] gap-8 md:gap-12 items-center">
-          <div className="relative order-2 lg:order-1">
+        <div className="grid lg:grid-cols-[1.5fr,1fr] gap-8 md:gap-12 mt-[27px] sm:mt-[87px] justify-center items-center">
+          <div className="relative order-2 w-full max-w-[753px] h-[488px] lg:order-1">
             <Image
               src="/img/product_show.png"
               alt="Kaito Dashboard Features"
-              width={800}
-              height={600}
+              width={753}
+              height={488}
               className="rounded-lg w-full h-auto"
             />
           </div>
-          <div className="space-y-12 order-1 mt-6 lg:order-2">
+          <div className="gap-[44px] flex flex-col mt-[100px] order-1 max-w-[383px] h-[488px] lg:order-2">
             <FeatureItem
               icon="/img/investor_tip_1.png"
               title="Instant Insights"
@@ -97,8 +97,8 @@ function FeatureItem({
   return (
     <div className="flex gap-4 items-start">
       <div className="flex-shrink-0">
-        <div className="h-12 w-12">
-          <Image src={icon} alt="Investor Logos" width={50} height={50} />
+        <div className="h-[52px] w-[52px]">
+          <Image src={icon} alt="Investor Logos" width={52} height={52} />
         </div>
       </div>
       <div>

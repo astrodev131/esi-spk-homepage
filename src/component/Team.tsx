@@ -2,12 +2,16 @@ import Image from "next/image";
 
 export default function Team() {
   return (
-    <section className="pb-24 w-full sm:-mt-[200px] md:-mt-[240px] lg:mt-20 mt-20  grayscale">
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-[18px] font-light leading-normal text-center text-white/80 sm:text-[20xl] sm:leading-normal">
+    <section className="pb-6 w-full sm:-pt-[200px] md:-pt-[240px] lg:pt-[40px] pt-[0px]  grayscale lg:-mt-[0px] mt-[0px] sm:-mt-[270px]">
+      <div className="max-w-[1200px] mx-auto">
+        <div
+          className="text-lg font-normal mb-[24px] leading-normal text-center text-white/80 sm:text-xl sm:leading-normal"
+          data-sentry-element="unknown"
+          data-sentry-source-file="MainBlock.tsx"
+        >
           Powering 500+ Investment, Marketing and Growth Teams
-        </h2>
-        <div className="grid sm:grid-cols-5 grid-cols-4 md:grid-cols-8 gap-4 py-10">
+        </div>
+        <div className="grid sm:grid-cols-5 grid-cols-4 md:grid-cols-8 gap-4">
           {Array.from({ length: 40 }).map((_, i) => (
             <div key={i} className="flex justify-center items-center">
               <Image

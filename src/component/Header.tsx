@@ -9,10 +9,13 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 w-full border-b border-gray-800 bg-[#0A0B0D]/80 backdrop-blur-sm z-50">
-      <div className="max-w-[1500px] mx-auto flex h-[72px] items-center justify-between px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-8">
-          <Link href="/" className="flex items-center gap-4">
+    <header
+      className="fixed  top-0 w-full  border-b border-gray-800 bg-[#0A0B0D]/80 backdrop-blur-[32px] z-50"
+      style={{ boxShadow: "0px 1px 0px 0px rgba(255, 255, 255, 0.15)" }}
+    >
+      <div className="max-w-[1540px] px-[50px] mt-1 mx-auto flex h-[71px] items-center justify-between">
+        <div className="flex items-center gap-[46px]">
+          <Link href="/" className="flex items-center">
             <Image
               src="/logo.d373024f.png"
               alt="Kaito Logo"
@@ -21,7 +24,7 @@ export default function Header() {
               className="h-[20px] w-[100px]"
             />
           </Link>
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-[26px]">
             {["Portal", "API", "Pricing", "Yaps", "Careers", "EthCC"].map(
               (item) => (
                 <Link
@@ -35,15 +38,28 @@ export default function Header() {
             )}
           </nav>
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex justify-end items-center gap-2 w-[228px]">
           <Link
             href="#"
             className="hidden sm:block text-lg text-cyancolor hover:text-cyan-400 transition-colors"
           >
-            Sign in
+            <div className="cursor-pointer h-8 px-4 py-[11px] text-lg  rounded justify-center items-center inline-flex">
+              <div className="font-semibold leading-tight text-center text-teal-300">
+                Sign In
+              </div>
+            </div>
           </Link>
-          <Button className="hidden sm:block py-1" onClick={() => {}}>
-            Contact Sales
+          <Button
+            className="hidden md:block w-[135px] h-[32px]"
+            onClick={() => {}}
+          >
+            <div
+              data-sentry-element="Flex"
+              data-sentry-source-file="Button.tsx"
+              className="css-gmuwbf font-semibold tracking-wide"
+            >
+              Contact Sales
+            </div>
           </Button>
           <div
             className="md:hidden"
@@ -59,7 +75,7 @@ export default function Header() {
       </div>
 
       {mobileMenuOpen && (
-        <div className="md:hidden border-t z-50 h-screen border-gray-800 bg-[#0A0B0D] absolute w-full">
+        <div className="md:hidden border-t  z-50 h-screen border-gray-800 bg-[#0A0B0D] absolute w-full">
           <nav className="px-4 sm:px-6 lg:px-8 py-4">
             {[
               "Portal",
