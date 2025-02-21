@@ -12,6 +12,7 @@ export function ImageSlider() {
     "/img/w=640&q=90 (3).webp",
     "/img/w=640&q=90 (4).webp",
     "/img/w=640&q=90 (5).webp",
+    "/img/w=640&q=90 (6).webp",
   ];
 
   useEffect(() => {
