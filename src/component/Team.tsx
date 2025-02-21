@@ -16,14 +16,15 @@ export default function Team() {
         </h2>
         <div className="grid sm:grid-cols-5 grid-cols-4 md:grid-cols-8 gap-4 py-10">
           {Array.from({ length: 40 }).map((_, i) => (
-            <Image
-              key={i}
-              src={`/img/w=256&q=100 (${i}).webp`}
-              alt="Investor Logos"
-              width={136}
-              height={40}
-              className="w-full"
-            />
+            <div key={i} className="flex justify-center items-center">
+              <Image
+                src={`/img/w=256&q=100 (${i}).webp`}
+                alt="Investor Logos"
+                width={136}
+                height={40}
+                className="w-[136px] h-[40px] object-contain"
+              />
+            </div>
           ))}
         </div>
       </div>

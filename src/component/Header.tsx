@@ -10,7 +10,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 w-full border-b border-gray-800 bg-[#0A0B0D]/80 backdrop-blur-sm z-50">
-      <div className="max-w-7xl mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1500px] mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-8">
           <Link href="/" className="flex items-center gap-2">
             <Image
@@ -38,7 +38,7 @@ export default function Header() {
         <div className="flex items-center gap-4">
           <Link
             href="#"
-            className="hidden sm:block text-sm text-cyancolor hover:text-cyan-400 transition-colors"
+            className="hidden sm:block text-md text-cyancolor hover:text-cyan-400 transition-colors"
           >
             Sign in
           </Link>
