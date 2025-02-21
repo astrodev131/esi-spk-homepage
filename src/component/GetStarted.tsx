@@ -10,8 +10,8 @@ export default function GetStarted() {
         const rect = divRef.current.getBoundingClientRect();
         const windowHeight = window.innerHeight;
         const newWidth = Math.min(
-          100,
-          Math.max(10, 100 * (1 - rect.top / windowHeight))
+          300,
+          Math.max(10, 300 * (1 - rect.top / windowHeight))
         );
         setWidth(newWidth);
       }
@@ -37,7 +37,7 @@ export default function GetStarted() {
           <div
             ref={divRef}
             className="h-1 bg-[#5eead4] mx-auto mt-4 transition-all duration-300"
-            style={{ width: `${width}px`, maxWidth: "300px" }}
+            style={{ width: `${width}px`, maxWidth: "600px" }}
           />
         </h2>
         <p className="text-gray-400 max-w-2xl mx-auto px-4 mt-8 text-center text-white/60 text-sm md:text-lg font-normal leading-6 md:leading-7">

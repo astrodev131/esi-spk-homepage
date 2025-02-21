@@ -11,8 +11,8 @@ export default function Investors() {
         const rect = divRef.current.getBoundingClientRect();
         const windowHeight = window.innerHeight;
         const newWidth = Math.min(
-          100,
-          Math.max(10, 100 * (1 - rect.top / windowHeight))
+          300,
+          Math.max(10, 300 * (1 - rect.top / windowHeight))
         );
         setWidth(newWidth);
       }
@@ -31,7 +31,7 @@ export default function Investors() {
               <div
                 ref={divRef}
                 className="h-1 bg-[#5eead4] mx-auto mt-4 transition-all duration-300"
-                style={{ width: `${width}px`, maxWidth: "300px" }}
+                style={{ width: `${width}px`, maxWidth: "600px" }}
               />
             </h2>
             <div className="flex items-center justify-center">
@@ -55,7 +55,7 @@ export default function Investors() {
               <div
                 ref={divRef}
                 className="h-1 bg-[#5eead4] mx-auto mt-4 transition-all duration-300"
-                style={{ width: `${width}px`, maxWidth: "300px" }}
+                style={{ width: `${width}px`, maxWidth: "600px" }}
               />
             </h2>
             <div className="flex flex-wrap justify-center gap-4 md:gap-8">

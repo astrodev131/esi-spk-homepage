@@ -12,7 +12,7 @@ export default function ProductHightlight() {
         const windowHeight = window.innerHeight;
         const newWidth = Math.min(
           300,
-          Math.max(10, 100 * (1 - rect.top / windowHeight))
+          Math.max(10, 300 * (1 - rect.top / windowHeight))
         );
         setWidth(newWidth);
       }
@@ -43,7 +43,7 @@ export default function ProductHightlight() {
             <div
               ref={divRef}
               className="h-1 bg-[#5eead4] mx-auto mt-4 transition-all duration-300"
-              style={{ width: `${width}px`, maxWidth: "300px" }}
+              style={{ width: `${width}px`, maxWidth: "600px" }}
             />
           </h2>
         </div>
