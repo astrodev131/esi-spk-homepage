@@ -4,15 +4,15 @@ export default function Footer() {
   return (
     <footer className="mt-20">
       <div className="px-16 py-10 md:pb:10 pb-20 md:pb-11">
-        <div className="flex flex-col lg:flex-row justify-between">
-          <div className="-mt-10 lg:flex-col flex w-5/12 flex-row justify-start gap-4 items-start">
+        <div className="flex flex-col xl:flex-row justify-between">
+          <div className="-mt-10 md:flex-row lg:flex-col flex lg:w-5/12 w-12/12 flex-col justify-start gap-4 items-start">
             <div className="flex items-center gap-2 mb-6">
               <Image
                 src="/logo.d373024f.png"
                 alt="Kaito Logo"
-                width={32}
-                height={32}
-                className="h-[20px] min-w-[100px]"
+                width={100}
+                height={20}
+                className="h-[20px] w-[100px] object-contain md:h-auto md:w-auto"
               />
             </div>
             <h3 className="lg:block hidden font-semibold mb-4">Contact Us</h3>
@@ -97,9 +97,9 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-          <div className="flex lg:w-7/12 w-full mt-5 justify-between flex-wrap gap-4">
+          <div className="flex xl:w-5/12 w-full mt-5 justify-between flex-wrap gap-4">
             <div className="w-1/3 sm:w-1/5">
-              <h3 className="font-semibold mb-4">Product</h3>
+              <h3 className="font-semibold text-[16px] mb-4">Product</h3>
               <ul className="space-y-2">
                 {["Portal", "API", "Yaps"].map((item) => (
                   <li key={item}>
@@ -115,9 +115,9 @@ export default function Footer() {
             </div>
 
             <div className="w-1/3 sm:w-1/5">
-              <h3 className="font-semibold mb-4">Resources</h3>
+              <h3 className="font-semibold  text-[16px] mb-4">Resources</h3>
               <ul className="space-y-2">
-                {["EthCC", "Documentation", "Blog"].map((item) => (
+                {["EthCC"].map((item) => (
                   <li key={item}>
                     <Link
                       href="#"
@@ -131,9 +131,9 @@ export default function Footer() {
             </div>
 
             <div className="w-1/3 mt-10 sm:mt-0 sm:w-1/5">
-              <h3 className="font-semibold mb-4">Pricing Plan</h3>
+              <h3 className="font-semibold  text-[16px] mb-4">Pricing Plan</h3>
               <ul className="space-y-2">
-                {["Enterprise", "Team", "Individual"].map((item) => (
+                {["Pricing Plan"].map((item) => (
                   <li key={item}>
                     <Link
                       href="#"
@@ -147,7 +147,7 @@ export default function Footer() {
             </div>
 
             <div className="w-1/3  mt-10 sm:mt-0 sm:w-1/5">
-              <h3 className="font-semibold mb-4">Company</h3>
+              <h3 className="font-semibold  text-[16px] mb-4">Company</h3>
               <ul className="space-y-2">
                 {[
                   "About Us",

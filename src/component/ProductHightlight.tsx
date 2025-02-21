@@ -38,11 +38,11 @@ export default function ProductHightlight() {
             data-nsfw-filter-status="sfw"
             style={{ visibility: "visible" }}
           />
-          <h2 className="relative text-2xl md:text-4xl font-bold text-center mb-8 md:mb-16">
+          <h2 className="text-white text-[20px] md:text-[40px] font-semibold">
             Product Highlight
             <div
               ref={divRef}
-              className="h-1 bg-[#5eead4] mx-auto mt-4 transition-all duration-300"
+              className="h-[2px] bg-[#5eead4] mx-auto mt-4 transition-all duration-300"
               style={{ width: `${width}px`, maxWidth: "600px" }}
             />
           </h2>
@@ -57,7 +57,7 @@ export default function ProductHightlight() {
               className="rounded-lg w-full h-auto"
             />
           </div>
-          <div className="space-y-8 order-1 lg:order-2">
+          <div className="space-y-12 order-1 mt-6 lg:order-2">
             <FeatureItem
               icon="/img/investor_tip_1.png"
               title="Instant Insights"
@@ -102,8 +102,12 @@ function FeatureItem({
         </div>
       </div>
       <div>
-        <h3 className="font-semibold text-white">{title}</h3>
-        <p className="font-normal text-white text-opacity-70">{description}</p>
+        <h3 className="font-semibold text-[16px] sm:text-[18px] text-white">
+          {title}
+        </h3>
+        <p className="font-normal text-[16px] sm:text-[18px] text-[#ffffffb3] text-opacity-70">
+          {description}
+        </p>
       </div>
     </div>
   );

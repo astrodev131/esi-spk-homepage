@@ -24,7 +24,33 @@ export function ImageSlider() {
   }, []);
 
   return (
-    <div className="relative sm:w-[50%] lg:w-full  w-full  right-0 flex justify-end sm:h-[50%]  lg:h-full h-full  rounded-lg">
+    <div
+      className="relative sm:w-[50%] lg:w-full w-full right-0 flex justify-end sm:h-[50%] lg:h-full h-full rounded-lg"
+      onMouseDown={(e) => {
+        e.preventDefault();
+        const startX = e.clientX;
+        const handleMouseMove = (moveEvent: MouseEvent) => {
+          const diffX = moveEvent.clientX - startX;
+          if (diffX > 50) {
+            setCurrentSlide(
+              (prev) => (prev - 1 + slides.length) % slides.length
+            );
+            document.removeEventListener("mousemove", handleMouseMove);
+          } else if (diffX < -50) {
+            setCurrentSlide((prev) => (prev + 1) % slides.length);
+            document.removeEventListener("mousemove", handleMouseMove);
+          }
+        };
+        document.addEventListener("mousemove", handleMouseMove);
+        document.addEventListener(
+          "mouseup",
+          () => {
+            document.removeEventListener("mousemove", handleMouseMove);
+          },
+          { once: true }
+        );
+      }}
+    >
       {slides.map((slide, index) => (
         <div
           key={index}

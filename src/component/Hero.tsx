@@ -15,43 +15,30 @@ export default function Hero() {
         <div className="mt-10">
           <div className="grid lg:grid-cols-2 gap-12 items-top">
             <div className="space-y-6">
-              <div className="inline-block rounded-full bg-white/10 px-4 py-1 text-sm">
-                Kaito API is now available
+              <div className="inline-block border border-transparent hover:border-[#33FFFF] rounded-full text-gray-400 text-[16px] bg-white/10 px-4 py-1 text-sm">
+                <div className="flex justify-between items-center  hover:cursor-pointer">
+                  <span>Kaito API is now available</span>
+                  <span className="ml-2 text-[#33FFFF] block sm:hidden group-hover:block">
+                    →
+                  </span>
+                </div>
               </div>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+              <h1 className="text-[40px] sm:text-4xl lg:text-5xl xl:text-[56px] font-bold leading-tight">
                 The Ultimate Web3 Information Platform
               </h1>
-              <p className="text-base sm:text-lg text-gray-400 max-w-xl">
+              <p className="text-[16px] sm:text-[18px]  text-[#ffffffcc] max-w-[512px]">
                 Easily search and track any tickers, topics and narratives
                 across thousands of premium Web3 sources, turning terabytes of
                 unstructured information into actionable insights and powering
                 more informed decision making.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button
-                  className="py-2"
-                  onClick={() => {
-                    // Add your onClick handler logic here
-                  }}
-                >
+                <Button className="py-2" onClick={() => {}}>
                   Get Started
                   <span className="ml-2">→</span>
                 </Button>
-                {/* <Button
-                  onClick={() => {
-                    // Add your onClick handler logic here
-                  }}
-                  className="border-gray-700 hover:bg-gray-800"
-                >
-                  Contact Sales
-                </Button> */}
-                <StyledButton
-                  onClick={() => {
-                    // Add your onClick handler logic here
-                  }}
-                >
-                  Contact Sales
-                </StyledButton>
+
+                <StyledButton onClick={() => {}}>Contact Sales</StyledButton>
               </div>
             </div>
             <div className="relative flex justify-end aspect-[4/3] w-full">
@@ -59,7 +46,14 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        {/* Partners Section - Moved up */}
+      </div>
+      <div
+        style={{
+          backgroundImage: "url('/logo_bg.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <Team></Team>
       </div>
     </main>

@@ -8,7 +8,7 @@ import Footer from "./Footer";
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-[#0A0B0D] text-white">
+    <div className="min-h-screen bg-[#0d0f12] text-white">
       <Header />
       <Hero />
       <ProductHightlight />
