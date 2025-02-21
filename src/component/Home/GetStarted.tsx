@@ -1,6 +1,6 @@
 import { Button, StyledButton } from "./Button";
 import { useRef } from "react";
-import useScrollWidth from "./CustomHook";
+import useScrollWidth from "../../utils/CustomHook";
 
 export default function GetStarted() {
   const divRef = useRef<HTMLDivElement>(null);

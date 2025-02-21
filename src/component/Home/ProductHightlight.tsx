@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
-import useScrollWidth from "./CustomHook";
+import useScrollWidth from "../../utils/CustomHook";
 
 export default function ProductHightlight() {
   const divRef = useRef<HTMLDivElement>(null);
