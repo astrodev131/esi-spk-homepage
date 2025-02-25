@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useEffect, useState, useRef } from "react";
+import { useRef } from "react";
 import useScrollWidth from "../../utils/CustomHook";
 
 export default function ProductHightlight() {

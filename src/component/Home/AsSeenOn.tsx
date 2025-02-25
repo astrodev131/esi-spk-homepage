@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState, useEffect, useRef } from "react";
+import { useRef } from "react";
 import useScrollWidth from "../../utils/CustomHook";
 export default function AsSeenOn() {
   const divRef = useRef<HTMLDivElement>(null);
